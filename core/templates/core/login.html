@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      {% load static %}
+      <div class="headerTitle">
+        <h1>Login</h1>
+        <img src="{% static 'core/img/loguito.png'%}" alt="">
+      </div>
+      <div class="formLogin">
+        <form action="" method="post" id="formFromLogin">
+          {% csrf_token %}
+          <div class="inputs">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <br />
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+            <br />
+            <button type="submit">Iniciar sesion</button>
+          </div>
+        </form>
+        <button><a href="/registro">Registrarse</a></button>
+      </div>
+    </div>
+  </body>
+</html>
